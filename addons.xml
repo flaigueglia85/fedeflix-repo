@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<addons><addon id="script.fedeflix" name="FedeFlix" version="1.0.14" provider-name="FedeFlix">
+  <requires><import addon="xbmc.python" version="3.0.1" /><import addon="script.module.resolveurl" version="5.0.0" optional="true" /></requires>
+  <extension point="xbmc.python.script" library="default.py" />
+  <extension point="xbmc.service" library="service.py" start="login|startup" />
+  <extension point="xbmc.python.pluginsource" library="bridge.py"><provides>video</provides></extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="it_IT">BINGIE, Stream4Me e TheGroove con una sola configurazione.</summary>
+    <description lang="it_IT">Installa e configura FedeFlix. Film e serie con Stream4Me, Live ed EPG con TheGroove360.</description>
+    <platform>all</platform><license>GPL-3.0-or-later</license>
+    <assets><icon>resources/icon.png</icon></assets>
+  <path>v1.0.14/FedeFlix-1.0.14.zip</path></extension>
+</addon></addons>
