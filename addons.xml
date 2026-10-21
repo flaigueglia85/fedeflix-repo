@@ -1,14 +1,22 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="script.fedeflix" name="FedeFlix" version="1.0.44" provider-name="FedeFlix">
+<addons><addon id="script.fedeflix" name="FedeFlix" version="1.1.0" provider-name="FedeFlix">
   <requires><import addon="xbmc.python" version="3.0.1" /><import addon="script.module.resolveurl" version="5.0.0" optional="true" /></requires>
   <extension point="xbmc.python.script" library="default.py" />
   <extension point="xbmc.service" library="service.py" start="login|startup" />
   <extension point="xbmc.python.pluginsource" library="bridge.py"><provides>video</provides></extension>
+  <extension point="kodi.context.item">
+    <menu id="kodi.core.main">
+      <item library="manual.py">
+        <label>Riproduzione manuale - FedeFlix</label>
+        <visible>System.HasAddon(plugin.video.s4me) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,episode)]</visible>
+      </item>
+    </menu>
+  </extension>
   <extension point="xbmc.addon.metadata">
     <reuselanguageinvoker>false</reuselanguageinvoker>
     <summary lang="it_IT">BINGIE, Stream4Me e TheGroove con una sola configurazione.</summary>
     <description lang="it_IT">Installa e configura FedeFlix. Film e serie con Stream4Me, Live ed EPG con TheGroove360, MandraKodi e Aguia V.</description>
     <platform>all</platform><license>GPL-3.0-or-later</license>
     <assets><icon>resources/icon.png</icon></assets>
-  <path>v1.0.44/FedeFlix-1.0.44.zip</path></extension>
+  <path>v1.1.0/FedeFlix-1.1.0.zip</path></extension>
 </addon></addons>
